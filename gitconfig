@@ -30,7 +30,7 @@
 	ren = mv
 	rename = mv
 	pl = pull
-	prb = pull --rebase
+	ur = pull --rebase
 	ps = !fix-github-remotes && git push
 	psf = push --force
 	ra = rebase --abort
@@ -74,8 +74,8 @@
 	color = auto
 
 [user]
-	name = Curtis Rueden
-	email = ctrueden@wisc.edu
+	name = Mark Hiner
+	email = hinerm@gmail.com
 
 [rebase]
 	autosquash = true
