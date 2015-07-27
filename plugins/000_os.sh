@@ -18,6 +18,7 @@ esac
 # use readable ls colors
 if [ "$IS_LINUX" ]; then
 	alias ls='ls -AF --color=auto'
+	alias diskst='sudo smartctl -data -A /dev/sda'
 	export LS_COLORS="ow=30;42"
 else
 	alias ls='ls -AFG'
