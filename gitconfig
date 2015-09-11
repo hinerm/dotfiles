@@ -26,6 +26,7 @@
 	ff = merge --ff 'HEAD@{u}'
 	ffs = !git stash && git ff && git pop
 	ls = ls-files
+	lognm = log --name-status
 	move = mv
 	ren = mv
 	rename = mv
