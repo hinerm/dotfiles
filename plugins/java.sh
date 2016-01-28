@@ -16,16 +16,20 @@ if [ -x /usr/sbin/update-java-alternatives ]; then
 	export J6="$(jhome '6-oracle')"
 	export J7="$(jhome '7-oracle')"
 	export J8="$(jhome '8-oracle')"
+	export J9="$(jhome '9-oracle')"
 	alias j6='export JAVA_HOME="$J6" && sudo update-java-alternatives --set java-6-oracle && echo "JAVA_HOME -> $JAVA_HOME" && java -version'
 	alias j7='export JAVA_HOME="$J7" && sudo update-java-alternatives --set java-7-oracle && echo "JAVA_HOME -> $JAVA_HOME" && java -version'
 	alias j8='export JAVA_HOME="$J8" && sudo update-java-alternatives --set java-8-oracle && echo "JAVA_HOME -> $JAVA_HOME" && java -version'
+	alias j9='export JAVA_HOME="$J9" && sudo update-java-alternatives --set java-9-oracle && echo "JAVA_HOME -> $JAVA_HOME" && java -version'
 else
 	export J6="$(jhome '1.6')"
 	export J7="$(jhome '1.7')"
 	export J8="$(jhome '1.8')"
+	export J9="$(jhome '1.9')"
 	alias j6='export JAVA_HOME="$J6" && echo "JAVA_HOME -> $JAVA_HOME" && java -version'
 	alias j7='export JAVA_HOME="$J7" && echo "JAVA_HOME -> $JAVA_HOME" && java -version'
 	alias j8='export JAVA_HOME="$J8" && echo "JAVA_HOME -> $JAVA_HOME" && java -version'
+	alias j9='export JAVA_HOME="$J9" && echo "JAVA_HOME -> $JAVA_HOME" && java -version'
 fi
 
 # unset the actual classpath, since some programs play badly with it
