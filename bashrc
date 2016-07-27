@@ -5,6 +5,10 @@
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# SSH mounting
+alias mmsi="sshfs hine0116@login.msi.umn.edu:/home/pankrat2/hine0116/ /home/hinerm/mnt/msi/"
+alias umsi="fusermount -u /home/hinerm/mnt/msi"
+
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 	debian_chroot=$(cat /etc/debian_chroot)
@@ -65,6 +69,8 @@ fi
 
 # use vi commands for advanced editing (hit ESC to enter command mode)
 set -o vi
+
+alias gomsi='ssh -X msi'
 
 # --== hub (http://hub.github.com/) ==--
 
