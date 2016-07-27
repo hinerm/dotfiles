@@ -9,6 +9,9 @@ shopt -s checkwinsize
 alias mmsi="sshfs hine0116@login.msi.umn.edu:/home/pankrat2/hine0116/ /home/hinerm/mnt/msi/"
 alias umsi="fusermount -u /home/hinerm/mnt/msi"
 
+# Remote debug
+alias gendr="java -agentlib:jdwp=server=y,suspend=y,transport=dt_socket,address=localhost:8000 -jar genvisis.jar"
+
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 	debian_chroot=$(cat /etc/debian_chroot)
