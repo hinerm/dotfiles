@@ -1,0 +1,8 @@
+[code/umn/Genvisis]
+checkout = git clone git://github.com/PankratzLab/Genvisis
+
+[code/umn/MitoDocs]
+checkout = git clone git://github.com/PankratzLab/MitoDocs
+
+[code/umn/GATK]
+checkout = git clone git://github.com/PankratzLab/GATK
