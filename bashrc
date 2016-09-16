@@ -7,7 +7,7 @@ shopt -s checkwinsize
 
 # SSH mounting
 alias mmsi="sshfs hine0116@login.msi.umn.edu:/home/pankrat2/hine0116/ /home/hinerm/mnt/msi/"
-alias mntsi="sudo sshfs -o allow_other,IdentityFile=/home/hinerm/.ssh/id_msi hine0116@login.msi.umn.edu:/home/pankrat2/shared /mnt/msi"
+alias mntsi="ssh-agent bash && ssh-add /home/hinerm/.ssh/id_msi && sudo sshfs -o allow_other,IdentityFile=/home/hinerm/.ssh/id_msi hine0116@login.msi.umn.edu:/home/pankrat2/shared /mnt/msi"
 alias umsi="fusermount -u /home/hinerm/mnt/msi"
 alias mntvb="sudo mount -t vboxsf host /mnt/host/"
 
