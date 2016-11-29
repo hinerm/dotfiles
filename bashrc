@@ -11,9 +11,17 @@ alias agent="ssh-add /home/hinerm/.ssh/id_msi"
 alias mntsi="sudo sshfs -o allow_other,IdentityFile=/home/hinerm/.ssh/id_msi hine0116@login.msi.umn.edu:/home/pankrat2/shared /mnt/msi"
 alias umsi="fusermount -u /home/hinerm/mnt/msi"
 alias mntvb="sudo mount -t vboxsf host /mnt/host/"
+alias jvisvm="~/visualvm_139/bin/visualvm"
 
 # Remote debug
 alias gendr="java -agentlib:jdwp=server=y,suspend=y,transport=dt_socket,address=localhost:8000 -jar genvisis.jar"
+
+function debug() {
+	java -agentlib:jdwp=server=y,suspend=y,transport=dt_socket,address=localhost:8000 -jar $@
+
+}
+
+export -f debug
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
