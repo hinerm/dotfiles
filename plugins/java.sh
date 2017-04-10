@@ -13,13 +13,13 @@ if [ -x /usr/sbin/update-java-alternatives ]; then
 	jhome() {
 		/usr/sbin/update-java-alternatives -l | grep "$@" | head -n 1 | cut -f 3 -d ' '
 	}
-	export J6="$(jhome '6-oracle')"
+	export J6="/usr/lib/jvm/java-6-oracle/"
 	export J7="$(jhome '7-oracle')"
-	export J8="$(jhome '8-oracle')"
-	export J9="$(jhome '9-oracle')"
+	export J8="/usr/lib/jvm/java-8-openjdk-amd64/"
+	export J9="$(jhome '8-oracle')"
 	alias j6='export JAVA_HOME="$J6" && sudo update-java-alternatives --set java-6-oracle && echo "JAVA_HOME -> $JAVA_HOME" && java -version'
 	alias j7='export JAVA_HOME="$J7" && sudo update-java-alternatives --set java-7-oracle && echo "JAVA_HOME -> $JAVA_HOME" && java -version'
-	alias j8='export JAVA_HOME="$J8" && sudo update-java-alternatives --set java-8-oracle && echo "JAVA_HOME -> $JAVA_HOME" && java -version'
+	alias j8='export JAVA_HOME="$J8" && sudo update-java-alternatives --set java-1.8.0-openjdk-amd64 && echo "JAVA_HOME -> $JAVA_HOME" && java -version'
 	alias j9='export JAVA_HOME="$J9" && sudo update-java-alternatives --set java-9-oracle && echo "JAVA_HOME -> $JAVA_HOME" && java -version'
 else
 	export J6="$(jhome '1.6')"

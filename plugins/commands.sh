@@ -1,3 +1,7 @@
+# --== cli ==--
+
+alias ls='ls -lha'
+
 # --== git ==--
 
 # alias some common git typos

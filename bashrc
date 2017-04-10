@@ -8,13 +8,18 @@ shopt -s checkwinsize
 # SSH mounting
 alias mmsi="sshfs hine0116@login.msi.umn.edu:/home/pankrat2/hine0116/ /home/hinerm/mnt/msi/"
 alias agent="ssh-add /home/hinerm/.ssh/id_msi"
+alias mntpk="sudo sshfs -o allow_other,IdentityFile=/home/hinerm/.ssh/id_msi hine0116@login.msi.umn.edu:/home/pankrat2/ /mnt/pkr"
+alias mntscr="sudo sshfs -o allow_other,IdentityFile=/home/hinerm/.ssh/id_msi hine0116@login.msi.umn.edu:/scratch.global/ /mnt/scr"
 alias mntsi="sudo sshfs -o allow_other,IdentityFile=/home/hinerm/.ssh/id_msi hine0116@login.msi.umn.edu:/home/pankrat2/shared /mnt/msi"
+alias mntsol="sudo sshfs -o allow_other,IdentityFile=/home/hinerm/.ssh/id_msi hine0116@login.msi.umn.edu:/scratch.global/cole0482/SoL/ /mnt/sol"
+alias mntpnt="sudo sshfs -o allow_other,IdentityFile=/home/hinerm/.ssh/id_msi hine0116@login.msi.umn.edu:/home/poynterj/ /mnt/poynt"
 alias umsi="fusermount -u /home/hinerm/mnt/msi"
 alias mntvb="sudo mount -t vboxsf host /mnt/host/"
 alias jvisvm="~/visualvm_139/bin/visualvm"
+alias scpgen="scp /home/hinerm/genvisis/genvisis.jar hine0116@msi:/home/pankrat2/hine0116/"
 
 # Remote debug
-alias gendr="java -agentlib:jdwp=server=y,suspend=y,transport=dt_socket,address=localhost:8000 -jar genvisis.jar"
+alias gendr="java -agentlib:jdwp=server=y,suspend=y,transport=dt_socket,address=localhost:8000 -jar ~/genvisis/genvisis.jar"
 
 function debug() {
 	java -agentlib:jdwp=server=y,suspend=y,transport=dt_socket,address=localhost:8000 -jar $@
